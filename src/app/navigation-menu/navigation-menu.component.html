@@ -1,4 +1,4 @@
-<header id="header">
+<header class="header" [class.header-top]="!isHomePage">
   <div class="container">
     <h1><a routerLink="/home">Ross.</a></h1>
     <h2>I'm a <span>Web Developer</span> from Ukraine 💙💛</h2>
@@ -27,7 +27,8 @@
       <i class="bi mobile-nav-toggle" ngClass="{{isNavbarCollapsed ? 'bi-list' : 'bi-x'}}" (click)="toggleNavbar()"></i>
     </nav>
 
-    <div class="social-links">
+    
+    <div *ngIf="isHomePage" class="social-links">
       <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> -->
       <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
       <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>

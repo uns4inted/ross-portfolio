@@ -1,8 +1,8 @@
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-// animations
-#header {
+// home page navigation menu (default)
+.header {
   transition: ease-in-out 0.3s;
   position: relative;
   height: 100vh;
@@ -17,7 +17,7 @@
 }
 
 // fonts
-#header {
+.header {
   h1 {
     font-size: 48px;
     margin: 0;
@@ -47,14 +47,15 @@
   }
 }
 
-#header {
+.header {
   img {
     padding: 0;
     margin: 0;
   }
 }
 
-#header {
+// social links
+.header {
   .social-links {
     margin-top: 40px;
     display: flex;
@@ -80,7 +81,7 @@
 }
 
 @media (max-width: 992px) {
-  #header {
+  .header {
     h1 {
       font-size: 36px;
     }
@@ -99,7 +100,7 @@
   }
 }
 
-/* Header Top */
+/* Header Top (styles on other pages then home page)  */
 .header-top {
   height: 80px;
   position: fixed;
