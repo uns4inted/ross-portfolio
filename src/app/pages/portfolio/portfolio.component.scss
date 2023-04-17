@@ -1,3 +1,4 @@
+@import "../../../assets/styles/_variables.scss";
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -32,7 +33,7 @@
   
   .portfolio #portfolio-flters li:hover,
   .portfolio #portfolio-flters li.filter-active {
-    background: #18d26e;
+    background: $primary-color;
   }
   
   .portfolio #portfolio-flters li:last-child {
@@ -226,6 +227,6 @@
   }
   
   .portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #18d26e;
+    background-color: $primary-color;
   }
   
