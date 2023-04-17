@@ -11,6 +11,7 @@ export class AboutComponent implements OnInit {
   public sectionShow: boolean = false;
   public counter: PureCounter;
 
+  // TODO: extract to json file
   public skills = {
     html: 0,
     css: 0,
@@ -28,6 +29,8 @@ export class AboutComponent implements OnInit {
     // initialize counter
     this.counter = new PureCounter();
   }
+
+  // TODO: extract helper methods to service
 
   showSection() {
     // show section after 300ms delay to play animation of section fade in
