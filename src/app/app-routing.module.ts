@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: 'resume', component: ResumeComponent},
   { path: 'services', component: ServicesComponent},
-  { path: 'portfolio', component: PortfolioComponent},
+  // TODO: enable route after redesign
+  // { path: 'portfolio', component: PortfolioComponent},
   { path: 'contact', component: ContactComponent},
   { path: '**', redirectTo: '/home' },
 ];
