@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileDataService } from 'src/app/services/profile-data.service';
 
 @Component({
   selector: 'app-resume',
   templateUrl: './resume.component.html',
-  styleUrls: ['./resume.component.scss']
+  styleUrls: ['./resume.component.scss'],
 })
 export class ResumeComponent implements OnInit {
   public sectionShow: boolean = false;
+  public resumeData: any = {};
 
-  
+  constructor(private profileDataService: ProfileDataService) {}
+
   ngOnInit(): void {
+    this.resumeData = this.profileDataService.getResumeData();
     this.showSection();
   }
 
@@ -20,5 +24,4 @@ export class ResumeComponent implements OnInit {
       this.sectionShow = true;
     }, 300);
   }
-
 }
