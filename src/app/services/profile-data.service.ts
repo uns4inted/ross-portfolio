@@ -102,6 +102,7 @@ export class ProfileDataService {
         color: '#dd0031',
         content:
           'Build complex single-page front-end Web application using Angular framework with TypeScript.',
+        link: 'https://angular.io/',
       },
       {
         title: 'React',
@@ -109,6 +110,7 @@ export class ProfileDataService {
         color: '#61dafb',
         content:
           'Build dynamic front-end Web application using React JavaScript library.',
+        link: 'https://reactjs.org/',
       },
       {
         title: 'Next.js',
@@ -116,6 +118,7 @@ export class ProfileDataService {
         iconSrc: 'assets/img/icons/nextjs.svg',
         content:
           'Build SEO friendly full-stack (hybrid) Web applications using React with Next.js framework.',
+        link: 'https://nextjs.org/',
       },
       {
         title: 'JavaScript',
@@ -123,6 +126,7 @@ export class ProfileDataService {
         color: '#f7df1e',
         content:
           'Build dynamic website using HTML, CSS, JavaScript with any other JS library.',
+        link: 'https://www.javascript.com/',
       },
       {
         title: 'Node.js',
@@ -130,6 +134,7 @@ export class ProfileDataService {
         color: '#339933',
         content:
           'Build back-end of the application using Node.js and Express.js.',
+        link: 'https://nodejs.org/en/about/',
       },
       {
         title: 'MongoDB',
@@ -137,6 +142,7 @@ export class ProfileDataService {
         color: '#47a248',
         content:
           'Build and implement database for the application using MongoDB.',
+        link: 'https://www.mongodb.com/',
       },
     ],
   };

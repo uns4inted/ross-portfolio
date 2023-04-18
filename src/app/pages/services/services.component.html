@@ -16,11 +16,12 @@
                 <img *ngIf="serviceItem.iconSrc" [src]="serviceItem.iconSrc" [alt]="serviceItem.title">
               </i>
             </div>
-            <h4><a href="">{{serviceItem.title}}</a></h4>
+            <h4><a [href]="serviceItem.link" target="_blank">{{serviceItem.title}}</a></h4>
             <p>{{serviceItem.content}}</p>
           </div>
         </div>
       </div>
 
     </div>
-  </section><!-- End Services Section -->
+  </section>
+  
