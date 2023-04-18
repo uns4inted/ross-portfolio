@@ -1,3 +1,5 @@
+@import "../../../assets/styles/_variables.scss";
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
@@ -12,7 +14,7 @@
 
     i.bx {
       font-size: 24px;
-      color: #18d26e;
+      color: $primary-color;
       border-radius: 50%;
       padding: 14px;
       float: left;
@@ -48,7 +50,7 @@
       }
 
       a:hover {
-        color: #18d26e;
+        color: $primary-color;
       }
     }
   }
@@ -68,7 +70,7 @@
       .sent-message {
         display: none;
         background: rgba(255, 255, 255, 0.08);
-        background: #18d26e;
+        background: $primary-color;
         text-align: center;
         padding: 15px;
         font-weight: 600;
@@ -88,7 +90,7 @@
         width: 24px;
         height: 24px;
         margin: 0 10px -6px 0;
-        border: 3px solid #18d26e;
+        border: 3px solid $primary-color;
         border-top-color: #eee;
         animation: animate-loading 1s linear infinite;
       }
@@ -135,7 +137,7 @@
     }
 
     button[type="submit"] {
-      background: #18d26e;
+      background: $primary-color;
       border: 0;
       padding: 10px 30px;
       color: #fff;
