@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileDataService } from 'src/app/services/profile-data.service';
 
 @Component({
   selector: 'app-services',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
   public sectionShow: boolean = false;
+  public myServicesData: any = {};
+
+  constructor(private profileDataService: ProfileDataService) {}
 
   ngOnInit(): void {
+    this.myServicesData = this.profileDataService.getMyServicesData();
     this.showSection();
   }
 
