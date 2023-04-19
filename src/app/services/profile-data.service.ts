@@ -29,7 +29,7 @@ export class ProfileDataService {
       react: 75,
       node: 50,
     },
-  }
+  };
 
   // mock data for resume page
   private resumeData: any = {
@@ -172,6 +172,38 @@ export class ProfileDataService {
     ],
   };
 
+  private contactsData: any = {
+    address: 'Lviv, Ukraine',
+    email: 'smoothie.anon@gmail.com',
+    socialMedia: [
+      {
+        name: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/rostyslav-shkolyk/',
+        icon: 'bi bi-linkedin',
+      },
+      {
+        name: 'GitHub',
+        link: 'https://github.com/uns4inted/',
+        icon: 'bi bi-github',
+      },
+      {
+        name: 'Skype',
+        link: 'https://join.skype.com/invite/nXFAH7Jl5nJd',
+        icon: 'bi bi-skype',
+      },
+      {
+        name: 'Facebook',
+        link: 'https://www.facebook.com/NoLif3r/',
+        icon: 'bi bi-facebook',
+      },
+      {
+        name: 'Instagram',
+        link: 'https://www.instagram.com/nolif3r_senpai/',
+        icon: 'bi bi-instagram',
+      },
+    ],
+  };
+
   public getAboutData(): any {
     return this.aboutData;
   }
@@ -182,5 +214,9 @@ export class ProfileDataService {
 
   public getMyServicesData(): any {
     return this.myServicesData;
+  }
+
+  public getContactsData(): any {
+    return this.contactsData;
   }
 }

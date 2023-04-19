@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProfileDataService } from 'src/app/services/profile-data.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,8 +8,12 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
   public sectionShow: boolean = false;
+  public contactsData: any = {};
+
+  constructor(private profileDataService: ProfileDataService) {}
 
   ngOnInit(): void {
+    this.contactsData = this.profileDataService.getContactsData();
     this.showSection();
   }
 
