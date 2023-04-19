@@ -6,6 +6,31 @@ import { Injectable } from '@angular/core';
 export class ProfileDataService {
   constructor() {}
 
+  private aboutData: any = {
+    title: 'Web Developer',
+    subtitle: 'Hello, my name is Rostyslav Shkolyk.',
+    content: `
+    I am an experienced Web Developer from Lviv with a passion for building dynamic and engaging web applications. With over three years of experience, I have had the pleasure of working with clients from the USA, Canada, and Europe, delivering top-notch results every time.
+    <br><br>
+    Staying up-to-date with the latest web development technologies and tools is a top priority for me, and I have accomplished this through completing various courses. My knowledge of web development technologies is extensive, including Angular, React, Node.js, MongoDB, Express.js, HTML, CSS, JavaScript, and others.
+    <br><br>
+    My commitment to delivering exceptional service is unwavering, and I pride myself on delivering top-notch results every time. My skills in project collaboration, communication, and management are well-honed, and I have experience working with Jira, Bitbucket, GitLab, and GitHub. Overall, my goal is to exceed your expectations by providing high-quality work that drives your business forward.`,
+    birthday: '13 June',
+    website: 'rostyslav-shkolyk.web.app',
+    city: 'Lviv, Ukraine',
+    age: 25,
+    email: 'smoothie.anon@gmail.com',
+    openToWork: 'Yes',
+    skills: {
+      html: 90,
+      css: 75,
+      js: 95,
+      angular: 85,
+      react: 75,
+      node: 50,
+    },
+  }
+
   // mock data for resume page
   private resumeData: any = {
     sumary: {
@@ -146,6 +171,10 @@ export class ProfileDataService {
       },
     ],
   };
+
+  public getAboutData(): any {
+    return this.aboutData;
+  }
 
   public getResumeData() {
     return this.resumeData;

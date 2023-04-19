@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // @ts-ignore
 import * as PureCounter from '@srexi/purecounterjs';
+import { ProfileDataService } from 'src/app/services/profile-data.service';
 
 @Component({
   selector: 'app-about',
@@ -11,19 +12,12 @@ export class AboutComponent implements OnInit {
   public sectionShow: boolean = false;
   public counter: PureCounter;
 
-  // TODO: extract to json file
-  public skills = {
-    html: 0,
-    css: 0,
-    js: 0,
-    angular: 0,
-    react: 0,
-    node: 0,
-  };
+  public aboutData: any = {};
 
-  constructor() {}
+  constructor(private profileDataService: ProfileDataService) {}
 
   ngOnInit(): void {
+    this.aboutData = this.profileDataService.getAboutData();
     this.showSection();
     this.setSkills();
     // initialize counter
@@ -40,16 +34,14 @@ export class AboutComponent implements OnInit {
   }
 
   setSkills() {
-    // set skills values after 300ms delay to play animation for progress bars
+    let skills = {...this.aboutData.skills};
+    // set skills values to 0
+    for (const skill in skills) {
+      this.aboutData.skills[skill] = 0;
+    }
+    // return skills values after 300ms delay to play animation for progress bars
     setTimeout(() => {
-      this.skills = {
-        html: 90,
-        css: 75,
-        js: 95,
-        angular: 85,
-        react: 75,
-        node: 50,
-      };
+      this.aboutData.skills = skills;  
     }, 300);
   }
 }
