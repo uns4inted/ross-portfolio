@@ -55,49 +55,43 @@
     }
   }
 
-  .php-email-form {
+  .email-form {
     padding: 30px;
     background: rgba(255, 255, 255, 0.08);
 
     .error-message {
-      display: none;
       background: rgba(255, 255, 255, 0.08);
       background: #ed3c0d;
       text-align: left;
       padding: 15px;
       font-weight: 600;
-
-      .sent-message {
-        display: none;
-        background: rgba(255, 255, 255, 0.08);
-        background: $primary-color;
-        text-align: center;
-        padding: 15px;
-        font-weight: 600;
-      }
-
-      .loading {
-        display: none;
-        background: rgba(255, 255, 255, 0.08);
-        text-align: center;
-        padding: 15px;
-      }
-
-      .loading:before {
-        content: "";
-        display: inline-block;
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
-        margin: 0 10px -6px 0;
-        border: 3px solid $primary-color;
-        border-top-color: #eee;
-        animation: animate-loading 1s linear infinite;
-      }
+      margin-top: 25px;
+    }
+    
+    .sent-message {
+      background: rgba(255, 255, 255, 0.08);
+      background: $primary-color;
+      text-align: center;
+      padding: 15px;
+      font-weight: 600;
     }
 
-    .error-message br + br {
-      margin-top: 25px;
+    .loading {
+      background: rgba(255, 255, 255, 0.08);
+      text-align: center;
+      padding: 15px;
+    }
+
+    .loading:before {
+      content: "";
+      display: inline-block;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      margin: 0 10px -6px 0;
+      border: 3px solid $primary-color;
+      border-top-color: #eee;
+      animation: animate-loading 1s linear infinite;
     }
 
     input,
@@ -136,8 +130,8 @@
       padding: 12px 15px;
     }
 
-    button[type="submit"] {
-      background: $primary-color;
+    .btn-submit {
+      background-color: $primary-color;
       border: 0;
       padding: 10px 30px;
       color: #fff;
@@ -145,8 +139,13 @@
       border-radius: 4px;
     }
 
-    button[type="submit"]:hover {
-      background: #15bb62;
+    .btn-submit:hover {
+      background-color: $primary-color-hover-dark;
+    }
+    .btn-submit:disabled {
+      color: rgba(255, 255, 255, 0.08);
+      background-color: rgba(255, 255, 255, 0.08);
+      cursor: not-allowed;
     }
   }
 }

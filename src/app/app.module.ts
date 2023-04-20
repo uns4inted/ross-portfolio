@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +13,8 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 
+import { ContactService } from './services/contact.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +24,15 @@ import { NavigationMenuComponent } from './navigation-menu/navigation-menu.compo
     ServicesComponent,
     PortfolioComponent,
     ContactComponent,
-    NavigationMenuComponent
+    NavigationMenuComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ContactService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
