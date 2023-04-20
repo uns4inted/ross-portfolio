@@ -1,0 +1,162 @@
+@import "../../../assets/styles/_variables.scss";
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+
+// TODO: Do refactoring
+.contact {
+  .info-box {
+    color: #444444;
+    padding: 20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+
+    i.bx {
+      font-size: 24px;
+      color: $primary-color;
+      border-radius: 50%;
+      padding: 14px;
+      float: left;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    h3 {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.5);
+      font-weight: 700;
+      margin: 10px 0 8px 68px;
+    }
+
+    p {
+      padding: 0;
+      color: #fff;
+      line-height: 24px;
+      font-size: 14px;
+      margin: 0 0 0 68px;
+    }
+
+    .social-links {
+      margin: 5px 0 0 68px;
+      display: flex;
+
+      a {
+        font-size: 18px;
+        display: inline-block;
+        color: #fff;
+        line-height: 1;
+        margin-right: 12px;
+        transition: 0.3s;
+      }
+
+      a:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .email-form {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+
+    .error-message {
+      background: rgba(255, 255, 255, 0.08);
+      background: #ed3c0d;
+      text-align: left;
+      padding: 15px;
+      font-weight: 600;
+      margin-top: 25px;
+    }
+    
+    .sent-message {
+      background: rgba(255, 255, 255, 0.08);
+      background: $primary-color;
+      text-align: center;
+      padding: 15px;
+      font-weight: 600;
+    }
+
+    .loading {
+      background: rgba(255, 255, 255, 0.08);
+      text-align: center;
+      padding: 15px;
+    }
+
+    .loading:before {
+      content: "";
+      display: inline-block;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      margin: 0 10px -6px 0;
+      border: 3px solid $primary-color;
+      border-top-color: #eee;
+      animation: animate-loading 1s linear infinite;
+    }
+
+    input,
+    textarea {
+      border-radius: 0;
+      box-shadow: none;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 0;
+      transition: 0.3s;
+      color: #fff;
+    }
+
+    input:focus,
+    textarea:focus {
+      background-color: rgba(255, 255, 255, 0.11);
+    }
+
+    input::-moz-placeholder,
+    textarea::-moz-placeholder {
+      color: rgba(255, 255, 255, 0.3);
+      opacity: 1;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+      opacity: 1;
+    }
+
+    input {
+      padding: 10px 15px;
+    }
+
+    textarea {
+      padding: 12px 15px;
+    }
+
+    .btn-submit {
+      background-color: $primary-color;
+      border: 0;
+      padding: 10px 30px;
+      color: #fff;
+      transition: 0.4s;
+      border-radius: 4px;
+    }
+
+    .btn-submit:hover {
+      background-color: $primary-color-hover-dark;
+    }
+    .btn-submit:disabled {
+      color: rgba(255, 255, 255, 0.08);
+      background-color: rgba(255, 255, 255, 0.08);
+      cursor: not-allowed;
+    }
+  }
+}
+
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

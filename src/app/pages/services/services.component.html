@@ -1,0 +1,27 @@
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services" [class.section-show]="sectionShow">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>My web development services</p>
+      </div>
+
+      <div class="row">
+        <!-- TODO: replace to standalone component -->
+        <div *ngFor="let serviceItem of myServicesData.items" class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <div class="icon" [style.backgroundColor.hover::before]="serviceItem.color">
+              <i [ngClass]="serviceItem.icon" [style.color]="serviceItem.color">
+                <img *ngIf="serviceItem.iconSrc" [src]="serviceItem.iconSrc" [alt]="serviceItem.title">
+              </i>
+            </div>
+            <h4><a [href]="serviceItem.link" target="_blank">{{serviceItem.title}}</a></h4>
+            <p>{{serviceItem.content}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  

@@ -1,0 +1,379 @@
+<!-- ======= About Section ======= -->
+<section id="about" class="about" [class.section-show]="sectionShow">
+  <!-- ======= About Me ======= -->
+  <div class="about-me container">
+    <div class="section-title">
+      <h2>About</h2>
+      <p>Learn more about me</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4" data-aos="fade-right">
+        <img src="assets/img/me.jpg" class="img-fluid" alt="" />
+      </div>
+      <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+        <h3>{{aboutData.title}}</h3>
+        <p class="fst-italic">
+          {{aboutData.subtitle}}
+        </p>
+        <div class="row">
+          <div class="col-lg-6">
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i> <strong>Birthday:</strong>
+                <span>{{aboutData.birthday}}</span>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i> <strong>Website:</strong>
+                <span>{{aboutData.website}}</span>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i> <strong>City:</strong>
+                <span>{{aboutData.city}}</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i> <strong>Age:</strong>
+                <span>{{aboutData.age}}</span>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <strong>Email:</strong> <span>{{aboutData.email}}</span>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i> <strong>Open to Work:</strong>
+                <span>{{aboutData.openToWork}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p [innerHTML]="aboutData.content">
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End About Me -->
+
+  <!-- ======= Counts ======= -->
+  <div class="counts container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="count-box">
+          <i class="bi bi-code-slash"></i>
+          <span
+            data-purecounter-start="0"
+            data-purecounter-end="5"
+            data-purecounter-duration="1"
+            class="purecounter"
+          ></span>
+          <p>Years of Coding Expirience</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+        <div class="count-box">
+          <i class="bi bi-file-earmark-code-fill"></i>
+          <span class="d-inline-flex">
+            <span
+              data-purecounter-start="0"
+              data-purecounter-end="20"
+              data-purecounter-duration="1"
+              class="purecounter"
+            ></span>
+            <span>+</span>
+          </span>
+          <p>Completed Projects</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+        <div class="count-box">
+          <i class="bi bi-briefcase"></i>
+          <span
+            data-purecounter-start="0"
+            data-purecounter-end="3"
+            data-purecounter-duration="1"
+            class="purecounter"
+          ></span>
+          <p>Years of Commercial Experience</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+        <div class="count-box">
+          <i class="bi bi-cup-hot"></i>
+          <span class="d-inline-flex">
+            <span
+              data-purecounter-start="0"
+              data-purecounter-end="1825"
+              data-purecounter-duration="1"
+              class="purecounter"
+            ></span>
+            <span>+</span>
+          </span>
+          <p>Cups of Coffee</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Counts -->
+
+  <!-- ======= Skills  ======= -->
+  <div class="skills container">
+    <div class="section-title">
+      <h2>Skills</h2>
+    </div>
+
+    <div class="row skills-content">
+      <div class="col-lg-6">
+        <!-- TODO: display using loop -->
+        <div class="progress">
+          <span class="skill"
+            >JavaScript <i class="val">{{ aboutData.skills.js }}%</i></span
+          >
+          <div class="progress-bar-wrap">
+            <div
+              [style.width]="aboutData.skills.js + '%'"
+              class="progress-bar"
+              role="progressbar"
+            ></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"
+            >HTML <i class="val">{{ aboutData.skills.html }}%</i></span
+          >
+          <div class="progress-bar-wrap">
+            <div
+              [style.width]="aboutData.skills.html + '%'"
+              class="progress-bar"
+              role="progressbar"
+            ></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"
+            >CSS <i class="val">{{ aboutData.skills.css }}%</i></span
+          >
+          <div class="progress-bar-wrap">
+            <div
+              [style.width]="aboutData.skills.css + '%'"
+              class="progress-bar"
+              role="progressbar"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="progress">
+          <span class="skill"
+            >Angular <i class="val">{{ aboutData.skills.angular }}%</i></span
+          >
+          <div class="progress-bar-wrap">
+            <div
+              [style.width]="aboutData.skills.angular + '%'"
+              class="progress-bar"
+              role="progressbar"
+            ></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"
+            >React <i class="val">{{ aboutData.skills.react }}%</i></span
+          >
+          <div class="progress-bar-wrap">
+            <div
+              [style.width]="aboutData.skills.react + '%'"
+              class="progress-bar"
+              role="progressbar"
+            ></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"
+            >Node.JS <i class="val">{{ aboutData.skills.node }}%</i></span
+          >
+          <div class="progress-bar-wrap">
+            <div
+              [style.width]="aboutData.skills.node + '%'"
+              class="progress-bar"
+              role="progressbar"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Skills -->
+
+  <!-- ======= Interests ======= -->
+  <div class="interests container">
+    <div class="section-title">
+      <h2>Interests</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3 col-md-4">
+        <div class="icon-box">
+          <i class="bi bi-cpu" style="color: #ffbb2c"></i>
+          <h3>Computer Technologies</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+        <div class="icon-box">
+          <i class="bi bi-code-slash" style="color: #5578ff"></i>
+          <h3>Web Development</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+        <div class="icon-box">
+          <i class="bi bi-unity" style="color: #e80368"></i>
+          <h3>Game Development</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+        <div class="icon-box">
+          <i class="bi bi-music-note-beamed" style="color: #e361ff"></i>
+          <h3>Music Composing</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="ri-bell-fill" style="color: #47aeff"></i>
+          <h3>Anime and Manga</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="fa-solid fa-paw" style="color: #ffa76e"></i>
+          <h3>Cats</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="ri-gamepad-line" style="color: #11dbcf"></i>
+          <h3>Gaming</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="fa-solid fa-guitar" style="color: #4233ff"></i>
+          <h3>Guitar</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="fa-solid fa-shrimp" style="color: #b20969"></i>
+          <h3>Asian Food</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="fa-solid fa-mountain-city" style="color: #b2904f"></i>
+          <h3>Traveling</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="bi-badge-vr" style="color: #ff5828"></i>
+          <h3>Virtual Reaility</h3>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mt-4">
+        <div class="icon-box">
+          <i class="fa-solid fa-skull" style="color: #eeeeee"></i>
+          <h3>Alt-Metal</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Interests -->
+
+  <!-- ======= Testimonials ======= -->
+  <!-- TODO: Add testimonials -->
+  <!-- <div class="testimonials container">
+    <div class="section-title">
+      <h2>Testimonials</h2>
+    </div>
+
+    <div
+      class="testimonials-slider swiper"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Proin iaculis purus consequat sem cure digni ssim donec porttitora
+              entum suscipit rhoncus. Accusantium quam, ultricies eget id,
+              aliquam eget nibh et. Maecen aliquam, risus at semper.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img
+              src="assets/img/testimonials/testimonials-1.jpg"
+              class="testimonial-img"
+              alt=""
+            />
+            <h3>Saul Goodman</h3>
+            <h4>Ceo &amp; Founder</h4>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Export tempor illum tamen malis malis eram quae irure esse labore
+              quem cillum quid cillum eram malis quorum velit fore eram velit
+              sunt aliqua noster fugiat irure amet legam anim culpa.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img
+              src="assets/img/testimonials/testimonials-2.jpg"
+              class="testimonial-img"
+              alt=""
+            />
+            <h3>Sara Wilsson</h3>
+            <h4>Designer</h4>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Enim nisi quem export duis labore cillum quae magna enim sint
+              quorum nulla quem veniam duis minim tempor labore quem eram duis
+              noster aute amet eram fore quis sint minim.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img
+              src="assets/img/testimonials/testimonials-3.jpg"
+              class="testimonial-img"
+              alt=""
+            />
+            <h3>Jena Karlis</h3>
+            <h4>Store Owner</h4>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="owl-carousel testimonials-carousel"></div>
+  </div>
+ -->
+  <!-- End Testimonials  -->
+</section>
+<!-- End About Section -->
