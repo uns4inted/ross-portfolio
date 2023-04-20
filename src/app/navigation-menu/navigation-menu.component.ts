@@ -26,7 +26,7 @@ export class NavigationMenuComponent implements OnInit {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd | any) => {
-        let currentUrl = event.url;
+        let currentUrl = event.urlAfterRedirects;
         this.isHomePage = currentUrl === '/home';
       });
   }
