@@ -27,6 +27,13 @@ export class NavigationMenuComponent implements OnInit {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
   }
 
+  // helper method to close navbar on click on mobile devices
+  closeNavbar() {
+    if (this.isNavbarCollapsed === false) {
+      this.isNavbarCollapsed = true;
+    }
+  }
+
   checkCurrentRoute() {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))

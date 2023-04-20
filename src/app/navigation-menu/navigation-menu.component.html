@@ -6,23 +6,23 @@
     <nav id="navbar" class="navbar" [class.navbar-mobile]="!isNavbarCollapsed">
       <ul>
         <li class="nav-item">
-          <a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
+          <a routerLink="/home" routerLinkActive="active" class="nav-link" (click)="closeNavbar()">Home</a>
         </li>
         <li class="nav-item">
-          <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
+          <a routerLink="/about" routerLinkActive="active" class="nav-link" (click)="closeNavbar()">About</a>
         </li>
         <li class="nav-item">
-          <a routerLink="/resume" routerLinkActive="active" class="nav-link">Resume</a>
+          <a routerLink="/resume" routerLinkActive="active" class="nav-link" (click)="closeNavbar()">Resume</a>
         </li>
         <li class="nav-item">
-          <a routerLink="/services" routerLinkActive="active" class="nav-link">Services</a>
+          <a routerLink="/services" routerLinkActive="active" class="nav-link" (click)="closeNavbar()">Services</a>
         </li>
         <!-- TODO: uncomment after section redesign done -->
         <!-- <li class="nav-item">
-          <a routerLink="/portfolio" routerLinkActive="active" class="nav-link">Portfolio</a>
+          <a routerLink="/portfolio" routerLinkActive="active" class="nav-link" (click)="closeNavbar()">Portfolio</a>
         </li> -->
         <li class="nav-item">
-          <a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a>
+          <a routerLink="/contact" routerLinkActive="active" class="nav-link" (click)="closeNavbar()">Contact</a>
         </li>
       </ul>
       <i class="bi mobile-nav-toggle" ngClass="{{isNavbarCollapsed ? 'bi-list' : 'bi-x'}}" (click)="toggleNavbar()"></i>
