@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { ProfileDataService } from '../services/profile-data.service';
 
 @Component({
   selector: 'app-navigation-menu',
@@ -10,12 +11,16 @@ import { filter } from 'rxjs/operators';
 export class NavigationMenuComponent implements OnInit {
   public isNavbarCollapsed = true;
   public isHomePage = false;
+  public socialLinks: {name: string, link: string, icon: string}[] | [] = [];
 
-  constructor(private router: Router) {
-  }
+  constructor(
+    private router: Router,
+    private profileDataService: ProfileDataService
+  ) {}
 
   ngOnInit(): void {
     this.checkCurrentRoute();
+    this.socialLinks = this.profileDataService.getSocialLinks();
   }
 
   toggleNavbar() {

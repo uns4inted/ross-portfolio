@@ -16,7 +16,7 @@ export class ProfileDataService {
     <br><br>
     My commitment to delivering exceptional service is unwavering, and I pride myself on delivering top-notch results every time. My skills in project collaboration, communication, and management are well-honed, and I have experience working with Jira, Bitbucket, GitLab, and GitHub. Overall, my goal is to exceed your expectations by providing high-quality work that drives your business forward.`,
     birthday: '13 June',
-    website: 'rostyslav-shkolyk.web.app',
+    website: 'ross-webdev.com',
     city: 'Lviv, Ukraine',
     age: 25,
     email: 'smoothie.anon@gmail.com',
@@ -218,5 +218,9 @@ export class ProfileDataService {
 
   public getContactsData(): any {
     return this.contactsData;
+  }
+
+  public getSocialLinks(): any {
+    return this.contactsData.socialMedia;
   }
 }
