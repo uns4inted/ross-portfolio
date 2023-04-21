@@ -192,14 +192,14 @@ export class ProfileDataService {
         icon: 'bi bi-skype',
       },
       {
-        name: 'Facebook',
-        link: 'https://www.facebook.com/NoLif3r/',
-        icon: 'bi bi-facebook',
+        name: 'Telegram',
+        link: 'https://t.me/smoothie_anon',
+        icon: 'bi bi-telegram',
       },
       {
-        name: 'Instagram',
-        link: 'https://www.instagram.com/nolif3r_senpai/',
-        icon: 'bi bi-instagram',
+        name: 'Email',
+        link: 'mailto:smoothie.anon@gmail.com',
+        icon: 'bi bi-envelope-at-fill',
       },
     ],
   };
