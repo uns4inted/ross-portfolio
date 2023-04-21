@@ -37,7 +37,7 @@ export class ProfileDataService {
       title: 'Sumary',
       fullName: 'Rostyslav Shkolyk',
       content:
-        'I am a full stack developer with 5+ years of experience in web development. I have worked on a wide range of technologies and projects. I am passionate about building scalable and maintainable web applications. I am a quick learner and a team player. I am always looking for opportunities to learn and grow.',
+        'With 5+ years of experience in programming, I have extensive knowledge of a wide range of technologies and projects as a full stack Web developer. Building scalable and maintainable web applications is my passion. I am committed to being a quick learner and a valuable team player, always seeking opportunities for personal and professional growth.',
       address: 'Lviv, Ukraine',
       email: 'smoothie.anon@gmail.com',
     },
