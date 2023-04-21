@@ -12,7 +12,6 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("./assets/img/bg.jpg") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -72,13 +71,34 @@ section {
   padding-bottom: 45px;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   section {
     top: 120px;
   }
 
   .section-show {
     top: 80px;
+  }
+}
+
+/* зображення для портретної орієнтації екрана */
+@media (orientation: portrait) {
+  body {
+    background-image: url("./assets/img/bg-mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+/* зображення для ландшафтної орієнтації екрана */
+@media (orientation: landscape) {
+  body {
+    background-image: url("./assets/img/bg.jpg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
 }
 
