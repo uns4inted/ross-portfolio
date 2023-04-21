@@ -11,33 +11,48 @@
     <div class="row mt-2">
       <div class="col-md-6 d-flex align-items-stretch">
         <div class="info-box">
-          <i class="bx bx-map"></i>
-          <h3>My Location</h3>
-          <p>{{ contactsData.address }}</p>
+          <div>
+            <i class="bx bx-envelope"></i>
+          </div>
+          <div>
+            <h3>Email Me</h3>
+            <p>
+              <a [href]="'mailto:' + contactsData.email">
+                {{ contactsData.email }}
+              </a>
+            </p>
+          </div>
         </div>
       </div>
 
       <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
         <div class="info-box">
-          <i class="bx bx-share-alt"></i>
-          <h3>Social Profiles</h3>
-          <div class="social-links">
-            <a *ngFor="let item of contactsData.socialMedia" [href]="item.link">
-              <i [ngClass]="item.icon"></i>
-            </a>
+          <div>
+            <i class="bx bx-share-alt"></i>
+          </div>
+          <div>
+            <h3>Social Profiles</h3>
+            <div class="social-links">
+              <a
+                *ngFor="let item of contactsData.socialMedia"
+                [href]="item.link"
+              >
+                <i [ngClass]="item.icon"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="col-md-6 mt-4 d-flex align-items-stretch">
         <div class="info-box">
-          <i class="bx bx-envelope"></i>
-          <h3>Email Me</h3>
-          <p>
-            <a [href]="'mailto:' + contactsData.email">
-              {{ contactsData.email }}
-            </a>
-          </p>
+          <div>
+            <i class="bx bx-map"></i>
+          </div>
+          <div>
+            <h3>My Location</h3>
+            <p>{{ contactsData.address }}</p>
+          </div>
         </div>
       </div>
     </div>
